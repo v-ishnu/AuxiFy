@@ -5,8 +5,6 @@ const mongoose = require('mongoose');
 const jwt =require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 
-const userOTPverification = require("./models/userOTPverification");
-require('dotenv').config();
 
 
 app.use(cors());
