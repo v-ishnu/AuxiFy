@@ -13,7 +13,7 @@ app.use(cors());
 app.use(express.json());
 
 //  Configure DB
-mongoose.connect(process.env.mongoURL).then(() => {
+mongoose.connect("mongodb+srv://vishnuprakash572:HjN3M3n6xwelC3BX@auxify.caita.mongodb.net/?retryWrites=true&w=majority&appName=AuxiFy").then(() => {
     console.log(`Database Connected: ✅ Successfully`);
 }).catch((e) => {
     console.log(e);
@@ -39,7 +39,7 @@ app.post("/login", async(req, res)=>{
     }
 
     if (await bcrypt.compare(password,oldUser.password)){
-        const token=jwt.sign({email:oldUser.email}, process.env.JWT_SECRET_KEY);
+        const token=jwt.sign({email:oldUser.email}, "hvdvay6ert72839289()aiyg8t87qt72393293883uhefiuh78ttq3ifi78272jdsds039[]]pou89ywe");
 
         if (res.status(201)){
             return res.send({status:"ok", data:token})
